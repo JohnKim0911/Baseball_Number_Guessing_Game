@@ -1,0 +1,357 @@
+/* -------------- Note -------------- */
+/** 
+1. Responsive size:
+    - X-Large devices (large desktops, 1200px and up) => Default
+    - Large devices (desktops, less than 1200px)
+    - Medium devices (tablets, less than 992px)
+    - Small devices (landscape phones, less than 768px)
+    - X-Small devices (portrait phones, less than 576px)
+
+2. Media Query (for responsive design) is stored below its default-size code.
+*/
+
+
+/* -------------- CSS Global Variables -------------- */
+:root {
+    --themeColor_DarkBlue: #011F3F;
+    --themeColor_DarkLightBlue: #2b5a79;
+    --themeColor_LightBlue: #5494c0;
+}
+
+
+/* -------------- Element Selector -------------- */
+
+/* X-Large devices (large desktops, 1200px and up) */
+/* No media query for this since this is the default */
+/* default font-size for the root: 16px; */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+h2 {
+    margin: 10px;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+    h2 {
+        margin: 5px;
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    h2 {
+        font-size: 1.3em;
+    }
+}
+
+
+/* -------------- Containers -------------- */
+.main-container {
+    /* height: 100vh; */
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto 1fr 4fr;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .main-container {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: unset;
+    }
+}
+
+.container {
+    background-color: var(--themeColor_DarkBlue);
+    padding: 10px;
+}
+
+#title-container {
+    grid-column: span 2;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    #title-container {
+        grid-column: unset;
+    }
+}
+
+#log-container {
+    grid-row: span 2;
+    grid-area: 2 / 2 / span 2 / span 1;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    #log-container {
+        grid-row: unset;
+        grid-area: unset;
+    }
+}
+
+/* -------------- Buttons -------------- */
+.btn {
+    background-color: white;
+    margin: 5px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 20%;
+    color: black;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199px) {
+    .btn {
+        height: 40px;
+        width: 40px;
+    }
+
+    /* Letter in each button in the number list, user's anwer list */
+    #numList-container p,
+    #userAnswer-container p {
+        /* Align text center vertically */
+        margin: 11px 0 0;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+    .btn {
+        height: 30px;
+        width: 30px;
+        margin: 3px;
+    }
+
+    /* Letter in each button in the number list, user's anwer list */
+    #numList-container p,
+    #userAnswer-container p {
+        /* Align text center vertically */
+        margin: 8px 0 0;
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .btn {
+        height: 20px;
+        width: 20px;
+    }
+
+    /* Letter in each button in the number list, user's anwer list */
+    #numList-container p,
+    #userAnswer-container p {
+        /* Align text center vertically */
+        margin: 3px 0 0;
+    }
+}
+
+.hideBtn {
+    display: none;
+}
+
+
+/* -------------- Smaller Buttons on the Log Table-------------- */
+.btn-sm {
+    height: 40px;
+    width: 40px;
+    /* em: font-size related to the root font size: 16px; */
+    font-size: 0.8em;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199px) {
+    .btn-sm {
+        height: 30px;
+        width: 30px;
+    }
+
+    /* Letter in each button in the log table */
+    .btn-sm p {
+        /* Align text center vertically */
+        margin: 9px 0 0;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+    .btn-sm {
+        height: 20px;
+        width: 20px;
+    }
+
+    /* Letter in each button in the log table */
+    .btn-sm p {
+        /* Align text center vertically */
+        margin: 4px 0 0;
+    }
+}
+
+.bg-grey {
+    background-color: grey;
+}
+
+.bg-black {
+    background-color: black;
+    color: white;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+/* -------------- Log Table -------------- */
+#logTable {
+    /* single line border --> border-collapse: collapse */
+    border-collapse: collapse;
+    /* Align contents center */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Table Style */
+#logTable td,
+#logTable th {
+    border: 1px solid white;
+    padding: 12px 10px;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+    /* Table Style */
+    #logTable td,
+    #logTable th {
+        padding: 8px 6px;
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    /* Table Style */
+    #logTable td,
+    #logTable th {
+        padding: 5px 3px;
+    }
+}
+
+/* Table Header Style */
+#logTable th {
+    background-color: var(--themeColor_DarkLightBlue);
+}
+
+/* When hovering the rows on the table body, change the background color to highlight*/
+#logTable-body tr:hover {
+    background-color: skyblue;
+    color: black;
+}
+
+/* Will be used to highlight a new row on logTable*/
+.highLightNewRow {
+    background-color: skyblue;
+}
+
+
+/* -------------- Winning message -------------- */
+#winning-message {
+    margin-top: 1em;
+}
+
+/* Play Again Button */
+#playAgainBtn {
+    display: inline-block;
+    background-color: var(--themeColor_LightBlue);
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 150px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#playAgainBtn:hover {
+    background-color: skyblue;
+    /* color: black; */
+}
+
+#playAgainBtn > span {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199px) {
+    #playAgainBtn {
+        width: 80px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #playAgainBtn > span {
+        font-size: 1.1em;
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    #playAgainBtn {
+        width: 70px;
+        padding: 7px;
+        margin: 7px;
+    }
+
+    #playAgainBtn > span {
+        font-size: 1em;
+    }
+}

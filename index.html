@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Baseball Number Guessing Game</title> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- Title Container -->
+        <div id="title-container" class="container">
+            <h1>Baseball Number Guessing Game</h1>
+        </div>
+
+        <!-- Number List Container -->
+        <div id="numList-container" class="container">
+            <h2>Number List</h2>
+            <div id="num0" class="btn">
+                <p>0</p>
+            </div>
+            <div id="num1" class="btn">
+                <p>1</p>
+            </div>
+            <div id="num2" class="btn">
+                <p>2</p>
+            </div>
+            <div id="num3" class="btn">
+                <p>3</p>
+            </div>
+            <div id="num4" class="btn">
+                <p>4</p>
+            </div>
+            <div id="num5" class="btn">
+                <p>5</p>
+            </div>
+            <div id="num6" class="btn">
+                <p>6</p>
+            </div>
+            <div id="num7" class="btn">
+                <p>7</p>
+            </div>
+            <div id="num8" class="btn">
+                <p>8</p>
+            </div>
+            <div id="num9" class="btn">
+                <p>9</p>
+            </div>
+        </div>
+
+        <!-- User Answer Container -->
+        <div id="userAnswer-container" class="container">
+            <h2>Your Guess</h2>
+            <div class="btn">
+                <p class="userAnswer-num">_</p>
+            </div>
+            <div class="btn">
+                <p class="userAnswer-num">_</p>
+            </div>
+            <div class="btn">
+                <p class="userAnswer-num">_</p>
+            </div>
+            <!-- Hidden when length of answer is 3 -->
+            <div id="userAnswer4thDigit" class="btn hideBtn">
+                <p class="userAnswer-num">_</p>
+            </div>
+
+            <!-- Hidden winning message -->
+            <div id="winning-message" class="hideBtn">
+                <h2>You win!</h2>
+                <p id="answer-display">display answer here using jquery</p>
+                <!-- Play Again button -->
+                <div id="playAgainBtn">
+                    <span>Play Again</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Log Container -->
+        <div id="log-container" class="container">
+            <h2>Log</h2>
+            <!-- Keep the user's Answers and the check-result -->
+            <table id="logTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Guess</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="logTable-body">
+                    <!-- table rows will be added here using JQuery. Example: -->
+                    <!-- <tr class="userGueesNo1">
+                        <td>1</td>
+                        <td>
+                            <div class="btn btn-sm num5">
+                                <p>5</p>
+                            </div>
+                            <div class="btn btn-sm num1">
+                                <p>1</p>
+                            </div>
+                            <div class="btn btn-sm num9">
+                                <p>9</p>
+                            </div>
+                        </td>
+                        <td>1S1B</td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- External JavaScript -->
+    <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
