@@ -4,4 +4,4 @@
 
 ## Click the link below to play the game
 
-https://johnkim0911.github.io/Baseball_Number_Guessing_Game/
+<a href="https://johnkim0911.github.io/Baseball_Number_Guessing_Game/" target="_blank">https://johnkim0911.github.io/Baseball_Number_Guessing_Game/</a>
