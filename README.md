@@ -1,8 +1,11 @@
 # Baseball_Number_Guessing_Game
 <img src="https://github.com/JohnKim0911/Baseball_Number_Guessing_Game/blob/main/screenshot.png?raw=true" alt="Screenshot of the game">
 
-## Click the link below to play the game
+## Click the link below to play the game yourself!
 <a href="https://johnkim0911.github.io/Baseball_Number_Guessing_Game/" target="_blank">https://johnkim0911.github.io/Baseball_Number_Guessing_Game/</a>
+
+## Alternatively, you can watch the playing video on Youtube.
+<a href="https://youtu.be/1C8-9Y367qM?si=kVt-z8EwZWQlqvnW" target="_blank">https://youtu.be/1C8-9Y367qM?si=kVt-z8EwZWQlqvnW</a>
 
 ## Terms
 - 1B - One right number, wrong position.
